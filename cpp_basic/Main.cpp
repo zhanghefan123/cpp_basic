@@ -6,8 +6,11 @@
 # include "headers/ConcatStringWithSStream.h"
 # include "headers/CinAndCout.h"
 # include "headers/InlineFunction.h"
+# include "headers/MacroAndConstTest.h"
+# include "../c_and_cpp_mixed_programming/headers/myFunc.h"
 
 using namespace std;
+
 
 int main()
 {
@@ -26,4 +29,13 @@ int main()
     int *b_pointer = &b;
     cpp_basic::inlineSwap(a_pointer,b_pointer);
     cout << a << ',' << b << endl;
+    // 测试4：宏定义函数测试 -- 宏定义由于是替换，所以每个变量都要打括号
+    // 我们可以使用我们的内联函数来进行替代
+    int macro_result = MACRO_SQRT(2);
+    cout << macro_result << endl;
+    // 测试5：我们如果要定义常量的话，我们可以使用static const关键字
+    // 进行静态常量的定义
+    cout << "ipv4 protocol number :" << cpp_basic::ipv4_protocol << endl;
+    // 测试6：进行混合编程的测试
+    display();
 }
