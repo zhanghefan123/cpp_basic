@@ -6,5 +6,5 @@
 
 // 但是有一种解决的方案，就是extern c
 void display(){
-    printf("%s", "this is c implementation function");
+    printf("%s\n", "this is c implementation function");
 }

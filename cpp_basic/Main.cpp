@@ -1,16 +1,21 @@
+////
+//// Created by huang aoan on 2022/11/9.
+////
 //
-// Created by huang aoan on 2022/11/9.
-//
-
 # include <iostream>
 # include "headers/ConcatStringWithSStream.h"
 # include "headers/CinAndCout.h"
 # include "headers/InlineFunction.h"
 # include "headers/MacroAndConstTest.h"
+# include "headers/StaticKeyWord.h"
+# include "headers/WeakAndStrongSymbol.h"
+# include "headers/ClassStaticVariable.h"
+# include "headers/LocalStaticVariable.h"
+# include "headers/NameSpaceTest.h"
 # include "../c_and_cpp_mixed_programming/headers/myFunc.h"
 
-using namespace std;
 
+using namespace std;
 
 int main()
 {
@@ -38,4 +43,26 @@ int main()
     cout << "ipv4 protocol number :" << cpp_basic::ipv4_protocol << endl;
     // 测试6：进行混合编程的测试
     display();
+    // 测试7：进行static关键字的测试
+    // static关键字的作用是使得函数只能在本cpp文件之中被使用,我们可以将内部逻辑，不想作为外部工具的函数打上我们的static关键字
+    int sqrt_result = cpp_basic::sqrt_using_multiply(2);
+    cout << sqrt_result << endl;
+    // 测试8：进行静态变量的测试
+    auto person1 = new cpp_basic::Person();
+    cout << "人数：" << cpp_basic::Person::getCount() << endl;
+    cout << typeid(person1).name() << endl;
+    delete person1;
+    cout << "人数：" << cpp_basic::Person::getCount() << endl;
+    // 测试9：进行局部静态变量的测试
+    cout << cpp_basic::testLocalStaticVariable() << endl;
+    cout << cpp_basic::testLocalStaticVariable() << endl;
+    cout << cpp_basic::testLocalStaticVariable() << endl;
+    // 测试10：进行弱符号和强符号的测试,发现最终的结果是40而不是20
+    // 说明被覆盖了
+    cout << cpp_basic::weak <<endl;
+    // 测试11：命名空间测试
+    zhf::buaa::display();
+    using zhf::buaa::display;
+    display();
+    // 测试12：进行using的测试
 }
