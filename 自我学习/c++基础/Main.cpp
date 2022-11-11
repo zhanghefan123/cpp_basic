@@ -12,7 +12,6 @@
 # include "headers/ClassStaticVariable.h"
 # include "headers/LocalStaticVariable.h"
 # include "headers/NameSpaceTest.h"
-# include "../c_and_cpp_mixed_programming/headers/myFunc.h"
 
 
 using namespace std;
@@ -41,8 +40,6 @@ int main()
     // 测试5：我们如果要定义常量的话，我们可以使用static const关键字
     // 进行静态常量的定义
     cout << "ipv4 protocol number :" << cpp_basic::ipv4_protocol << endl;
-    // 测试6：进行混合编程的测试
-    display();
     // 测试7：进行static关键字的测试
     // static关键字的作用是使得函数只能在本cpp文件之中被使用,我们可以将内部逻辑，不想作为外部工具的函数打上我们的static关键字
     int sqrt_result = cpp_basic::sqrt_using_multiply(2);
@@ -62,7 +59,5 @@ int main()
     cout << cpp_basic::weak <<endl;
     // 测试11：命名空间测试
     zhf::buaa::display();
-    using zhf::buaa::display;
-    display();
     // 测试12：进行using的测试
 }

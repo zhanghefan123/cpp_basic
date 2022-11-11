@@ -1,0 +1,10 @@
+add_executable(cpp_basic
+        source/CinAndCout.cpp
+        source/ConcatStringWithSStream.cpp
+        source/InlineFunction.cpp
+        source/LocalStaticVariable.cpp
+        source/NameSpaceTest.cpp
+        source/StaticKeyWord.cpp
+        source/WeakAndStrongSymbolTest1.cpp
+        source/WeakAndStrongSymbolTest2.cpp
+        Main.cpp)
