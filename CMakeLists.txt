@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 
 add_subdirectory(自我学习)
-add_subdirectory(C语言环境)
+add_subdirectory(C基础学习)
