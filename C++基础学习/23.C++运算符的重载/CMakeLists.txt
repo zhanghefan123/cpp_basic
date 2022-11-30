@@ -1,0 +1,9 @@
+include_directories(headers)
+add_executable(OperatorOverload
+        source/OperatorOverload.cpp
+        source/AssignOperatorOverload.cpp
+        source/AddOperatorInImplicitConvert.cpp
+        source/PlusplusAndMinusminus.cpp
+        source/IndexOperator.cpp
+        source/Parentheses.cpp
+        Main.cpp)
